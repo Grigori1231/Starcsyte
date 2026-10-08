@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Starcsyte</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #scrollToTopBtn {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                background-color: #3700ff;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                opacity: 0.7;
+                transition: opacity 0.3s;
+            }
+    
+            #scrollToTopBtn:hover {
+                opacity: 1;
+            }
+    
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 3em;
+                animation: shimmer 3s infinite;
+            }
+    
+            @keyframes shimmer {
+                0% {
+                    color: #FFFFFF;
+                    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+                }
+                50% {
+                    color: #00BFFF;
+                    text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF, 0 0 70px #00BFFF;
+                }
+                100% {
+                    color: #FFFFFF;
+                    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+                }
+            }
+        </style>
+        <script>
+            function navigateTo(page) {
+                window.location.href = `Zagruzka.html?target=${page}`;
+            }
+        </script>
+    </head>
+<body>
+    <div class="cart-icon">
+        <a href="#" onclick="navigateTo('Korzina.html')">
+            <img src="https://cdn-icons-png.flaticon.com/128/94/94552.png" alt="Корзина" class="icon-image">
+        </a>
+    </div>
+    <div class="container">
+        <h1>
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+            Starcsyte
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+        </h1>
+
+        <div class="nav-panel">
+            <a href="#" onclick="navigateTo('Komandyry.html')">Командиры</a>
+            <a href="#" onclick="navigateTo('Komentatory.html')">Комментаторы</a>
+            <a href="#" onclick="navigateTo('Smyliki.html')">Смайлики</a>
+            <a href="#" onclick="navigateTo('NaborySkinov.html')">Наборы Скинов</a>
+        </div>
+
+        <div class="unit">
+            <h3>Морпех</h3>
+            <p>Цена: 150 рублей</p>
+            <p class="description">Смайлик Морпех для чата.</p>
+            <img src="https://media.tenor.com/vqQRyy7E0QgAAAAM/marine-fi.gif" alt="Морпех">
+            <button onclick="addToCart('Морпех', 150, 'http://media.tenor.com/vqQRyy7E0QgAAAAM/marine-fi.gif', 'Смайлик Морпех для чата.')">Добавить в корзину</button>
+        </div>
+        <div class="unit">
+            <h3>Зерглинг</h3>
+            <p>Цена: 150 рублей</p>
+            <p class="description">Смайлик Зерглинг для чата.</p>
+            <img src="https://media.tenor.com/awK8t0gShBwAAAAM/zergling-butterfly.gif" alt="Зерглинг">
+            <button onclick="addToCart('Зерглинг', 150, 'http://media.tenor.com/awK8t0gShBwAAAAM/zergling-butterfly.gif', 'Смайлик Зерглинг для чата.')">Добавить в корзину</button>
+        </div>
+        <div class="unit">
+            <h3>Зонд</h3>
+            <p>Цена: 150 рублей</p>
+            <p class="description">Смайлик Зонд для чата.</p>
+            <img src="https://media.tenor.com/E9OCtL-yqPQAAAAM/probe-carbot-animations.gif" alt="Зонд">
+            <button onclick="addToCart('Зонд', 150, 'http://media.tenor.com/E9OCtL-yqPQAAAAM/probe-carbot-animations.gif', 'Смайлик Зонд для чата.')">Добавить в корзину</button>
+        </div>
+        <div class="unit">
+            <h3>Вражеский Морпех</h3>
+            <p>Цена: 150 рублей</p>
+            <p class="description">Смайлик Вражеский Морпех для чата.</p>
+            <img src="https://media.tenor.com/zVm0PmN5gj4AAAAM/duke-catjam.gif" alt="Вражеский Морпех">
+            <button onclick="addToCart('Вражеский Морпех', 150, 'http://media.tenor.com/zVm0PmN5gj4AAAAM/duke-catjam.gif', 'Смайлик Вражеский Морпех для чата.')">Добавить в корзину</button>
+        </div>
+        <div class="unit">
+            <h3>Бэйлинг</h3>
+            <p>Цена: 150 рублей</p>
+            <p class="description">Смайлик Бэйлинг для чата.</p>
+            <img src="https://media.tenor.com/umzjK0n9nY0AAAAM/baneling-carbot-animations.gif" alt="Бэйлинг">
+            <button onclick="addToCart('Бэйлинг', 150, 'http://media.tenor.com/umzjK0n9nY0AAAAM/baneling-carbot-animations.gif', 'Смайлик Бэйлинг для чата.')">Добавить в корзину</button>
+        </div>
+        <div class="unit">
+            <h3>Сталкер</h3>
+            <p>Цена: 150 рублей</p>
+            <p class="description">Смайлик Сталкер для чата.</p>
+            <img src="https://media.tenor.com/U7j3QuJYr9cAAAAM/stalker-starcraft2.gif" alt="Сталкер">
+            <button onclick="addToCart('Сталкер', 150, 'http://media.tenor.com/U7j3QuJYr9cAAAAM/stalker-starcraft2.gif', 'Смайлик Сталкер для чата.')">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function addToCart(name, price, image, description) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, image, description });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(name + ' добавлен в корзину!');
+        }
+    </script> 
+</body>
+</html>

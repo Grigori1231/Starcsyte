@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starcsyte</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #3700ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        #scrollToTopBtn:hover {
+            opacity: 1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 3em;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                color: #FFFFFF;
+                text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+            }
+            50% {
+                color: #00BFFF;
+                text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF, 0 0 70px #00BFFF;
+            }
+            100% {
+                color: #FFFFFF;
+                text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+            }
+        }
+    </style>
+    <script>
+        function navigateTo(page) {
+            window.location.href = `Zagruzka.html?target=${page}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="cart-icon">
+        <a href="#" onclick="navigateTo('Korzina.html')">
+            <img src="https://cdn-icons-png.flaticon.com/128/94/94552.png" alt="Корзина" class="icon-image">
+        </a>
+    </div>
+    <div class="container">
+        <h1>
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+            Starcsyte
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+        </h1>
+
+        <div class="nav-panel">
+            <a href="#" onclick="navigateTo('Komandyry.html')">Командиры</a>
+            <a href="#" onclick="navigateTo('Komentatory.html')">Комментаторы</a>
+            <a href="#" onclick="navigateTo('Smyliki.html')">Смайлики</a>
+            <a href="#" onclick="navigateTo('NaborySkinov.html')">Наборы Скинов</a>
+        </div>
+
+        <div class="race" id="zerg">
+            <h2>Зерги</h2>
+            <div class="unit">
+                <h3>Загара</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Загара — мощный командир Зергов, способный контролировать поле боя с помощью своих способностей.</p>
+                <img src="http://www.teamliquid.net/staff/monk/Coopguides/Zagara/Side_Image.jpg" alt="Загара">
+                <button onclick="addToCart('Загара', 460, 'http://www.teamliquid.net/staff/monk/Coopguides/Zagara/Side_Image.jpg', 'Загара — мощный командир Зергов, способный контролировать поле боя с помощью своих способностей.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Абатур</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Абатур — уникальный командир, который может улучшать своих юнитов и строения.</p>
+                <img src="https://tl.net/staff/Chimaron/Guides/Abathur/Side_Image.jpg" alt="Абатур">
+                <button onclick="addToCart('Абатур', 460, 'https://tl.net/staff/Chimaron/Guides/Abathur/Side_Image.jpg', 'Абатур — уникальный командир, который может улучшать своих юнитов и строения.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Стуков</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Стуков — командир, который использует механические улучшения для своих Зергов.</p>
+                <img src="http://www.teamliquid.net/staff/Chimaron/Guides/Stukov/Side_Image.jpg" alt="Стуков">
+                <button onclick="addToCart('Стуков', 460, 'https://www.teamliquid.net/staff/Chimaron/Guides/Stukov/Side_Image.jpg', 'Стуков — командир, который использует механические улучшения для своих Зергов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Дехака</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Дехака — командир, который может восстанавливать здоровье своих юнитов.</p>
+                <img src="http://www.teamliquid.net/staff/Chimaron/Guides/Dehaka/Side_Image.jpg" alt="Дехака">
+                <button onclick="addToCart('Дехака', 460, 'https://www.teamliquid.net/staff/Chimaron/Guides/Dehaka/Side_Image.jpg', 'Дехака — командир, который может восстанавливать здоровье своих юнитов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Стетманн</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Стетманн — командир, который использует механические улучшения для своих Зергов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt9872f0d45bc3aa8c/61254803c8e665143d53683a/17800-47190.png?imwidth=1088&imdensity=1" alt="Стетманн">
+                <button onclick="addToCart('Стетманн', 460, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt9872f0d45bc3aa8c/61254803c8e665143d53683a/17800-47190.png?imwidth=1088&imdensity=1', 'Стетманн — командир, который использует механические улучшения для своих Зергов.')">Добавить в корзину</button>
+            </div>
+        </div>
+
+        <div class="race" id="terran">
+            <h2>Терраны</h2>
+            <div class="unit">
+                <h3>Свон</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Свон — командир, который использует мощные механические улучшения.</p>
+                <img src="http://www.teamliquid.net/staff/monk/Coopguides/Swann/Side_Image.jpg" alt="Свон">
+                <button onclick="addToCart('Свон', 460, 'https://www.teamliquid.net/staff/monk/Coopguides/Swann/Side_Image.jpg', 'Свон — командир, который использует мощные механические улучшения.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Нова</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Нова — командир, который использует тактические улучшения для своих юнитов.</p>
+                <img src="http://www.teamliquid.net/staff/Chimaron/Guides/Nova/Side_Image.jpg" alt="Нова">
+                <button onclick="addToCart('Нова', 460, 'https://www.teamliquid.net/staff/Chimaron/Guides/Nova/Side_Image.jpg', 'Нова — командир, который использует тактические улучшения для своих юнитов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Хан и Хорнер</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Хан и Хорнер — командиры, которые используют мощные атаки и защиту.</p>
+                <img src="http://www.teamliquid.net/staff/Chimaron/Guides/HanHorner/Side_Image.jpg" alt="Хан и Хорнер">
+                <button onclick="addToCart('Хан и Хорнер', 460, 'https://www.teamliquid.net/staff/Chimaron/Guides/HanHorner/Side_Image.jpg', 'Хан и Хорнер — командиры, которые используют мощные атаки и защиту.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Тайкус</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Тайкус — командир, который использует мощные атаки и улучшения.</p>
+                <img src="https://tl.net/staff/Chimaron/Guides/Tychus/Side_Image.jpg" alt="Тайкус">
+                <button onclick="addToCart('Тайкус', 460, 'https://tl.net/staff/Chimaron/Guides/Tychus/Side_Image.jpg', 'Тайкус — командир, который использует мощные атаки и улучшения.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Менгск</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Менгск — командир, который использует мощные атаки и улучшения.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltd03247e03d66bc95/612547df3b67ad15b922c5be/19720-71073.png?imwidth=1088&imdensity=1" alt="Менгск">
+                <button onclick="addToCart('Менгск', 460, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltd03247e03d66bc95/612547df3b67ad15b922c5be/19720-71073.png?imwidth=1088&imdensity=1', 'Менгск — командир, который использует мощные атаки и улучшения.')">Добавить в корзину</button>
+            </div>
+        </div>
+
+        <div class="race" id="protoss">
+            <h2>Протоссы</h2>
+            <div class="unit">
+                <h3>Воразун</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Воразун — командир, который использует мощные атаки и защиту.</p>
+                <img src="http://www.teamliquid.net/staff/monk/Coopguides/Vorazun/Side_Image.jpg" alt="Воразун">
+                <button onclick="addToCart('Воразун', 460, 'https://www.teamliquid.net/staff/monk/Coopguides/Vorazun/Side_Image.jpg', 'Воразун — командир, который использует мощные атаки и защиту.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Каракс</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Каракс — командир, который использует мощные атаки и улучшения.</p>
+                <img src="http://www.teamliquid.net/staff/monk/Coopguides/Karax/Side_Image.jpg" alt="Каракс">
+                <button onclick="addToCart('Каракс', 460, 'https://www.teamliquid.net/staff/monk/Coopguides/Karax/Side_Image.jpg', 'Каракс — командир, который использует мощные атаки и улучшения.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Аларак</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Аларак — командир, который использует мощные атаки и улучшения.</p>
+                <img src="http://www.teamliquid.net/staff/Chimaron/Guides/Alarak/Side_Image.jpg" alt="Аларак">
+                <button onclick="addToCart('Аларак', 460, 'https://www.teamliquid.net/staff/Chimaron/Guides/Alarak/Side_Image.jpg', 'Аларак — командир, который использует мощные атаки и улучшения.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Феникс</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Феникс — командир, который использует мощные атаки и улучшения.</p>
+                <img src="http://www.teamliquid.net/staff/Chimaron/Guides/Fenix/Side_Image.jpg" alt="Феникс">
+                <button onclick="addToCart('Феникс', 460, 'https://www.teamliquid.net/staff/Chimaron/Guides/Fenix/Side_Image.jpg', 'Феникс — командир, который использует мощные атаки и улучшения.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Зератул</h3>
+                <p>Цена: 460 рублей</p>
+                <p class="description">Зератул — командир, который использует мощные атаки и улучшения.</p>
+                <img src="https://tl.net/staff/Chimaron/Guides/Zeratul/Side_Image.jpg" alt="Зератул">
+                <button onclick="addToCart('Зератул', 460, 'https://tl.net/staff/Chimaron/Guides/Zeratul/Side_Image.jpg', 'Зератул — командир, который использует мощные атаки и улучшения.')">Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function addToCart(name, price, image, description) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, image, description });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(name + ' добавлен в корзину!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Starcsyte</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #scrollToTopBtn {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                background-color: #3700ff;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                opacity: 0.7;
+                transition: opacity 0.3s;
+            }
+    
+            #scrollToTopBtn:hover {
+                opacity: 1;
+            }
+    
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 3em;
+                animation: shimmer 3s infinite;
+            }
+    
+            @keyframes shimmer {
+                0% {
+                    color: #FFFFFF;
+                    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+                }
+                50% {
+                    color: #00BFFF;
+                    text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF, 0 0 70px #00BFFF;
+                }
+                100% {
+                    color: #FFFFFF;
+                    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+                }
+            }
+        </style>
+        <script>
+            function navigateTo(page) {
+                window.location.href = `Zagruzka.html?target=${page}`;
+            }
+        </script>
+    </head>
+<body>
+    <div class="cart-icon">
+        <a href="#" onclick="navigateTo('Korzina.html')">
+            <img src="https://cdn-icons-png.flaticon.com/128/94/94552.png" alt="Корзина" class="icon-image">
+        </a>
+    </div>
+    <div class="container">
+        <h1>
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+            Starcsyte
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+        </h1>
+
+        <div class="nav-panel">
+            <a href="#" onclick="navigateTo('Komandyry.html')">Командиры</a>
+            <a href="#" onclick="navigateTo('Komentatory.html')">Комментаторы</a>
+            <a href="#" onclick="navigateTo('Smyliki.html')">Смайлики</a>
+            <a href="#" onclick="navigateTo('NaborySkinov.html')">Наборы Скинов</a>
+        </div>
+
+        <div class="unit">
+            <h3>Абатур</h3>
+            <p>Цена: 460 рублей</p>
+            <p class="description">Озвучка игры от командира Абатура.</p>
+            <img src="https://avatars.mds.yandex.net/i?id=e62d983c48feed603db43ad205ea6130_l-4290003-images-thumbs&n=13" alt="Абатур">
+            <button onclick="addToCart('Абатур', 460, 'http://avatars.mds.yandex.net/i?id=e62d983c48feed603db43ad205ea6130_l-4290003-images-thumbs&n=13', 'Озвучка игры от командира Абатура.')">Добавить в корзину</button>
+        </div>
+        <div class="unit">
+            <h3>Рэйнор</h3>
+            <p>Цена: 460 рублей</p>
+            <p class="description">Озвучка игры от командира Рейнора.</p>
+            <img src="https://avatars.mds.yandex.net/i?id=f2cedbfdb59b1ed39099aea70cc9d653_l-5353565-images-thumbs&n=13" alt="Рэйнор">
+            <button onclick="addToCart('Рэйнор', 460, 'http://avatars.mds.yandex.net/i?id=f2cedbfdb59b1ed39099aea70cc9d653_l-5353565-images-thumbs&n=13', 'Озвучка игры от командира Рейнора.')">Добавить в корзину</button>
+        </div>
+        <div class="unit">
+            <h3>Артанис</h3>
+            <p>Цена: 460 рублей</p>
+            <p class="description">Озвучка игры от командира Артаниса.</p>
+            <img src="https://avatars.mds.yandex.net/i?id=3f0e86f0f4df799757ce3d19c322bb74_l-5234588-images-thumbs&n=13" alt="Артанис">
+            <button onclick="addToCart('Артанис', 460, 'http://avatars.mds.yandex.net/i?id=3f0e86f0f4df799757ce3d19c322bb74_l-5234588-images-thumbs&n=13', 'Озвучка игры от командира Артаниса.')">Добавить в корзину</button>
+        </div>
+        <div class="unit">
+            <h3>Керриган</h3>
+            <p>Цена: 460 рублей</p>
+            <p class="description">Озвучка игры от командира Керриган.</p>
+            <img src="https://i.pinimg.com/736x/4f/8e/24/4f8e2481d9a5be1c65ec8de39a960d38.jpg" alt="Керриган">
+            <button onclick="addToCart('Керриган', 460, 'http://i.pinimg.com/736x/4f/8e/24/4f8e2481d9a5be1c65ec8de39a960d38.jpg', 'Озвучка игры от командира Керриган.')">Добавить в корзину</button>
+        </div>
+        <div class="unit">
+            <h3>Свон</h3>
+            <p>Цена: 460 рублей</p>
+            <p class="description">Озвучка игры от командира Свона.</p>
+            <img src="https://avatars.mds.yandex.net/i?id=1b8944718df05d280634508350b01afa_l-5405548-images-thumbs&n=13" alt="Свон">
+            <button onclick="addToCart('Свон', 460, 'http://avatars.mds.yandex.net/i?id=1b8944718df05d280634508350b01afa_l-5405548-images-thumbs&n=13', 'Озвучка игры от командира Свона.')">Добавить в корзину</button>
+        </div>
+        <div class="unit">
+            <h3>Аларак</h3>
+            <p>Цена: 460 рублей</p>
+            <p class="description">Озвучка игры от командира Аларака.</p>
+            <img src="https://i.pinimg.com/originals/b5/c1/1d/b5c11d113edefa1af9f0ecdcfac0bdc3.jpg" alt="Аларак">
+            <button onclick="addToCart('Аларак', 460, 'http://i.pinimg.com/originals/b5/c1/1d/b5c11d113edefa1af9f0ecdcfac0bdc3.jpg', 'Озвучка игры от командира Аларака.')">Добавить в корзину</button>
+
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function addToCart(name, price, image, description) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, image, description });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(name + ' добавлен в корзину!');
+        }
+    </script> 
+</body>
+</html>

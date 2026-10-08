@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starcsyte - Оплата</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 3em;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                color: #FFFFFF;
+                text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+            }
+            50% {
+                color: #00BFFF;
+                text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF, 0 0 70px #00BFFF;
+            }
+            100% {
+                color: #FFFFFF;
+                text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+            }
+        }
+
+        body {
+            background-color: #00BFFF;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .payment-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border: 2px solid #FFFFFF;
+        }
+
+        .payment-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .payment-form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+        }
+
+        .payment-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #FFFFFF;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+        }
+
+        .payment-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #3700ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .payment-form button:hover {
+            background-color: #00BFFF;
+        }
+
+        .payment-form input::placeholder {
+            color: #FFFFFF;
+            opacity: 1;
+        }
+    </style>
+    
+    <script>
+        function navigateTo(page) {
+            window.location.href = `Zagruzka.html?target=${page}`;
+        }
+
+        function validatePayment() {
+            const cardNumber = document.getElementById('cardNumber').value;
+            const cvc = document.getElementById('cvc').value;
+            const battleTag = document.getElementById('battleTag').value;
+
+            if (cardNumber.length !== 16 || cvc.length !== 3 || battleTag.trim() === '') {
+                alert('Пожалуйста, проверьте правильность введенных данных.');
+                return;
+            }
+
+            alert('Оплата прошла успешно! Спасибо за покупку!');
+        }
+    </script>
+</head>
+<body>
+    <div class="cart-icon">
+        <a href="#" onclick="navigateTo('Korzina.html')">
+            <img src="https://cdn-icons-png.flaticon.com/128/94/94552.png" alt="Корзина" class="icon-image">
+        </a>
+    </div>
+    <div class="container">
+        <h1>
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+            Оплата
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+        </h1>
+
+        <div class="nav-panel">
+            <a href="#" onclick="navigateTo('Komandyry.html')">Командиры</a>
+            <a href="#" onclick="navigateTo('Komentatory.html')">Комментаторы</a>
+            <a href="#" onclick="navigateTo('Smyliki.html')">Смайлики</a>
+            <a href="#" onclick="navigateTo('NaborySkinov.html')">Наборы Скинов</a>
+        </div>
+
+        <div class="payment-form">
+            <h2>Введите данные</h2>
+            <label for="battleTag">Название аккаунта в Battle.net:</label>
+            <input type="text" id="battleTag" placeholder="Ваш Никнейм в Battle.net">
+            <label for="cardNumber">Номер карты:</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+            <label for="cvc">CVC:</label>
+            <input type="text" id="cvc" placeholder="123" maxlength="3">
+            <button onclick="validatePayment()">Оплатить</button>
+        </div>
+    </div>
+</body>
+</html>

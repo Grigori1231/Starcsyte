@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starcsyte</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #3700ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        #scrollToTopBtn:hover {
+            opacity: 1;
+        }
+
+        .delete-btn {
+            background-color: #ffffff !important;
+            color: rgb(0, 0, 0) !important;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .delete-btn:hover {
+            background-color: #cc0000 !important;
+            color: white !important;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 3em;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                color: #FFFFFF;
+                text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+            }
+            50% {
+                color: #00BFFF;
+                text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF, 0 0 70px #00BFFF;
+            }
+            100% {
+                color: #FFFFFF;
+                text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+            }
+        }
+
+        #total-price {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5em;
+            border: 2px solid #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        #checkout-btn {
+            display: block;
+            margin: 20px auto 0 auto;
+            width: 150px;
+            height: 50px;
+            background-color: #3700ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #checkout-btn:hover {
+            background-color: #00BFFF;
+        }
+    </style>
+    <script>
+        function navigateTo(page) {
+            window.location.href = `Zagruzka.html?target=${page}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="cart-icon">
+        <a href="#" onclick="navigateTo('Korzina.html')">
+            <img src="https://cdn-icons-png.flaticon.com/128/94/94552.png" alt="Корзина" class="icon-image">
+        </a>
+    </div>
+    <div class="container">
+        <h1>
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+            Корзина
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+        </h1>
+        <div class="nav-panel">
+            <a href="#" onclick="navigateTo('Komandyry.html')">Командиры</a>
+            <a href="#" onclick="navigateTo('Komentatory.html')">Комментаторы</a>
+            <a href="#" onclick="navigateTo('Smyliki.html')">Смайлики</a>
+            <a href="#" onclick="navigateTo('NaborySkinov.html')">Наборы Скинов</a>
+        </div>
+
+        <div id="cart-items"></div>
+        <div id="total-price"></div>
+        <button id="checkout-btn" onclick="navigateTo('Oplata.html')">Оплатить</button>
+
+        <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+        
+
+        <script>
+            function scrollToTop() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            function displayCart() {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                let cartItemsDiv = document.getElementById('cart-items');
+                let totalPriceDiv = document.getElementById('total-price');
+                cartItemsDiv.innerHTML = '';
+
+                if (cart.length === 0) {
+                    cartItemsDiv.innerHTML = '<p>Ваша корзина пуста.</p>';
+                    totalPriceDiv.innerHTML = '';
+                    return;
+                }
+
+                let totalPrice = 0;
+
+                cart.forEach((item, index) => {
+                    let itemDiv = document.createElement('div');
+                    itemDiv.classList.add('unit');
+                    itemDiv.innerHTML = `
+                        <h3>${item.name}</h3>
+                        <p>Цена: ${item.price} рублей</p>
+                        <p class="description">${item.description}</p>
+                        <img src="${item.image}" alt="${item.name}" class="cart-image">
+                        <button class="delete-btn" onclick="removeFromCart(${index})">Удалить</button>
+                    `;
+                    cartItemsDiv.appendChild(itemDiv);
+                    totalPrice += item.price;
+                });
+
+                totalPriceDiv.innerHTML = `Итог: ${totalPrice} рублей`;
+            }
+
+            function removeFromCart(index) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                displayCart();
+            }
+
+            displayCart();
+        </script>
+    </div>
+</body>
+</html>

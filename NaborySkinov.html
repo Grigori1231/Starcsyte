@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Starcsyte</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #scrollToTopBtn {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                background-color: #3700ff;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                opacity: 0.7;
+                transition: opacity 0.3s;
+            }
+    
+            #scrollToTopBtn:hover {
+                opacity: 1;
+            }
+    
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 3em;
+                animation: shimmer 3s infinite;
+            }
+    
+            @keyframes shimmer {
+                0% {
+                    color: #FFFFFF;
+                    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+                }
+                50% {
+                    color: #00BFFF;
+                    text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF, 0 0 70px #00BFFF;
+                }
+                100% {
+                    color: #FFFFFF;
+                    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF;
+                }
+            }
+        </style>
+        <script>
+            function navigateTo(page) {
+                window.location.href = `Zagruzka.html?target=${page}`;
+            }
+        </script>
+    </head>
+<body>
+    <div class="cart-icon">
+        <a href="#" onclick="navigateTo('Korzina.html')">
+            <img src="https://cdn-icons-png.flaticon.com/128/94/94552.png" alt="Корзина" class="icon-image">
+        </a>
+    </div>
+    <div class="container">
+        <h1>
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+            Starcsyte
+            <img src="https://media.tenor.com/AsSi9zp6p9wAAAAM/starcraft-bongo-cat.gif" alt="Starcraft GIF" class="header-gif">
+        </h1>
+
+        <div class="nav-panel">
+            <a href="#" onclick="navigateTo('Komandyry.html')">Командиры</a>
+            <a href="#" onclick="navigateTo('Komentatory.html')">Комментаторы</a>
+            <a href="#" onclick="navigateTo('Smyliki.html')">Смайлики</a>
+            <a href="#" onclick="navigateTo('NaborySkinov.html')">Наборы Скинов</a>
+        </div>
+
+        <div class="race" id="zerg">
+            <h2>Зерги</h2>
+            <div class="unit">
+                <h3>1-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">1-й трофейный фонд: комплекты обликов — уникальные скины для ваших зергов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltc92a46b85a987852/6322504d1613910e6926c0f4/starcraft-ii-bc-2017-war-chest-skin-bundles-section1-feature3.png?imwidth=384&imdensity=1" alt="1-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('1-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltc92a46b85a987852/6322504d1613910e6926c0f4/starcraft-ii-bc-2017-war-chest-skin-bundles-section1-feature3.png?imwidth=384&imdensity=1', '1-й трофейный фонд: комплекты обликов — уникальные скины для ваших зергов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>2-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">2-й трофейный фонд: комплекты обликов — новые скины для ваших зергов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt96528c102b47684a/63225058be2fcf0db5eea600/starcraft-ii-kw-2018-war-chest-skin-bundles-section1-feature3.jpg?imwidth=384&imdensity=1" alt="2-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('2-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt96528c102b47684a/63225058be2fcf0db5eea600/starcraft-ii-kw-2018-war-chest-skin-bundles-section1-feature3.jpg?imwidth=384&imdensity=1', '2-й трофейный фонд: комплекты обликов — новые скины для ваших зергов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>3-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">3-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших зергов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt6a4424c7ec94b0d4/6322504da0ff920e11e79318/starcraft-ii-bc-2018-war-chest-skin-bundles-section1-feature2.jpg?imwidth=384&imdensity=1" alt="3-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('3-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt6a4424c7ec94b0d4/6322504da0ff920e11e79318/starcraft-ii-bc-2018-war-chest-skin-bundles-section1-feature2.jpg?imwidth=384&imdensity=1', '3-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших зергов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Комплекты обликов трофейного фонда для строений</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">Комплекты обликов трофейного фонда для строений — уникальные скины для ваших строений.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blteed226550d06ab96/6322505e251b540e0aea79de/starcraft-ii-kw-2019-structure-skin-bundles-section1-feature3.jpg?imwidth=384&imdensity=1" alt="Комплекты обликов трофейного фонда для строений">
+                <button onclick="addToCart('Комплекты обликов трофейного фонда для строений', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blteed226550d06ab96/6322505e251b540e0aea79de/starcraft-ii-kw-2019-structure-skin-bundles-section1-feature3.jpg?imwidth=384&imdensity=1', 'Комплекты обликов трофейного фонда для строений — уникальные скины для ваших строений.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>5-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">5-й трофейный фонд: комплекты обликов — новые скины для ваших зергов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltba05c19d6d76ab16/63225064be2fcf0db5eea608/starcraft-ii-war-chest-5-skins-section1-feature2.jpg?imwidth=384&imdensity=1" alt="5-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('5-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltba05c19d6d76ab16/63225064be2fcf0db5eea608/starcraft-ii-war-chest-5-skins-section1-feature2.jpg?imwidth=384&imdensity=1', '5-й трофейный фонд: комплекты обликов — новые скины для ваших зергов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>6-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">6-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших зергов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt73d22b7ce76c53d6/63225069a633280e74dc26fb/starcraft-ii-warchest-6-skin-bundles-section1-feature2.jpg?imwidth=384&imdensity=1" alt="6-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('6-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt73d22b7ce76c53d6/63225069a633280e74dc26fb/starcraft-ii-warchest-6-skin-bundles-section1-feature2.jpg?imwidth=384&imdensity=1', '6-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших зергов.')">Добавить в корзину</button>
+            </div>
+        </div>
+
+        <div class="race" id="terran">
+            <h2>Терраны</h2>
+            <div class="unit">
+                <h3>1-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">1-й трофейный фонд: комплекты обликов — уникальные скины для ваших терранов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt4c2877cf80488600/63224fe00e1b4f0e7b89a657/starcraft-ii-bc-2017-war-chest-skin-bundles-section1-feature1.png?imwidth=384&imdensity=1" alt="1-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('1-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt4c2877cf80488600/63224fe00e1b4f0e7b89a657/starcraft-ii-bc-2017-war-chest-skin-bundles-section1-feature1.png?imwidth=384&imdensity=1', '1-й трофейный фонд: комплекты обликов — уникальные скины для ваших терранов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>2-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">2-й трофейный фонд: комплекты обликов — новые скины для ваших терранов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt81c73f530ff943d9/63225058e7bdcf0dd996ca45/starcraft-ii-kw-2018-war-chest-skin-bundles-section1-feature1.jpg?imwidth=384&imdensity=1" alt="2-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('2-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt81c73f530ff943d9/63225058e7bdcf0dd996ca45/starcraft-ii-kw-2018-war-chest-skin-bundles-section1-feature1.jpg?imwidth=384&imdensity=1', '2-й трофейный фонд: комплекты обликов — новые скины для ваших терранов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>3-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">3-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших терранов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltd020278df880cb98/6322504d85af980dae7a305b/starcraft-ii-bc-2018-war-chest-skin-bundles-section1-feature1.jpg?imwidth=384&imdensity=1" alt="3-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('3-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltd020278df880cb98/6322504d85af980dae7a305b/starcraft-ii-bc-2018-war-chest-skin-bundles-section1-feature1.jpg?imwidth=384&imdensity=1', '3-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших терранов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Комплекты обликов трофейного фонда для строений</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">Комплекты обликов трофейного фонда для строений — уникальные скины для ваших строений.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltc29a6799d53c9a30/63225058e337fa0dc7263d26/starcraft-ii-kw-2019-structure-skin-bundles-section1-feature1.jpg?imwidth=384&imdensity=1" alt="Комплекты обликов трофейного фонда для строений">
+                <button onclick="addToCart('Комплекты обликов трофейного фонда для строений', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltc29a6799d53c9a30/63225058e337fa0dc7263d26/starcraft-ii-kw-2019-structure-skin-bundles-section1-feature1.jpg?imwidth=384&imdensity=1', 'Комплекты обликов трофейного фонда для строений — уникальные скины для ваших строений.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>5-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">5-й трофейный фонд: комплекты обликов — новые скины для ваших терранов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt82020cfb8e542119/632250640e1b4f0e7b89a66b/starcraft-ii-war-chest-5-skins-section1-feature1.jpg?imwidth=384&imdensity=1" alt="5-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('5-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt82020cfb8e542119/632250640e1b4f0e7b89a66b/starcraft-ii-war-chest-5-skins-section1-feature1.jpg?imwidth=384&imdensity=1', '5-й трофейный фонд: комплекты обликов — новые скины для ваших терранов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>6-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">6-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших терранов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltdd1b644fe7e8122e/63225069e337fa0dc7263d32/starcraft-ii-warchest-6-skin-bundles-section1-feature1.jpg?imwidth=384&imdensity=1" alt="6-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('6-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltdd1b644fe7e8122e/63225069e337fa0dc7263d32/starcraft-ii-warchest-6-skin-bundles-section1-feature1.jpg?imwidth=384&imdensity=1', '6-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших терранов.')">Добавить в корзину</button>
+            </div>
+        </div>
+
+        <div class="race" id="protoss">
+            <h2>Протоссы</h2>
+            <div class="unit">
+                <h3>1-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">1-й трофейный фонд: комплекты обликов — уникальные скины для ваших протоссов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt20c8c7986958dc82/6322504df581050de0035f62/starcraft-ii-bc-2017-war-chest-skin-bundles-section1-feature2.png?imwidth=384&imdensity=1" alt="1-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('1-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt20c8c7986958dc82/6322504df581050de0035f62/starcraft-ii-bc-2017-war-chest-skin-bundles-section1-feature2.png?imwidth=384&imdensity=1', '1-й трофейный фонд: комплекты обликов — уникальные скины для ваших протоссов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>2-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">2-й трофейный фонд: комплекты обликов — новые скины для ваших протоссов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt828461a06abf2654/63225058251b540e0aea79da/starcraft-ii-kw-2018-war-chest-skin-bundles-section1-feature2.jpg?imwidth=384&imdensity=1" alt="2-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('2-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt828461a06abf2654/63225058251b540e0aea79da/starcraft-ii-kw-2018-war-chest-skin-bundles-section1-feature2.jpg?imwidth=384&imdensity=1', '2-й трофейный фонд: комплекты обликов — новые скины для ваших протоссов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>3-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">3-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших протоссов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltceaed86a8e35f89b/6322504d3ab6f40dd2a90817/starcraft-ii-bc-2018-war-chest-skin-bundles-section1-feature3.jpg?imwidth=384&imdensity=1" alt="3-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('3-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltceaed86a8e35f89b/6322504d3ab6f40dd2a90817/starcraft-ii-bc-2018-war-chest-skin-bundles-section1-feature3.jpg?imwidth=384&imdensity=1', '3-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших протоссов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>Комплекты обликов трофейного фонда для строений</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">Комплекты обликов трофейного фонда для строений — уникальные скины для ваших строений.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfc237e32ee324366/6322505ef581050de0035f66/starcraft-ii-kw-2019-structure-skin-bundles-section1-feature2.jpg?imwidth=384&imdensity=1" alt="Комплекты обликов трофейного фонда для строений">
+                <button onclick="addToCart('Комплекты обликов трофейного фонда для строений', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfc237e32ee324366/6322505ef581050de0035f66/starcraft-ii-kw-2019-structure-skin-bundles-section1-feature2.jpg?imwidth=384&imdensity=1', 'Комплекты обликов трофейного фонда для строений — уникальные скины для ваших строений.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>5-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">5-й трофейный фонд: комплекты обликов — новые скины для ваших протоссов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltf40725f2dbc4da1b/63225064e7bdcf0dd996ca49/starcraft-ii-war-chest-5-skins-section1-feature3.jpg?imwidth=384&imdensity=1" alt="5-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('5-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltf40725f2dbc4da1b/63225064e7bdcf0dd996ca49/starcraft-ii-war-chest-5-skins-section1-feature3.jpg?imwidth=384&imdensity=1', '5-й трофейный фонд: комплекты обликов — новые скины для ваших протоссов.')">Добавить в корзину</button>
+            </div>
+            <div class="unit">
+                <h3>6-й трофейный фонд: комплекты обликов</h3>
+                <p>Цена: 4000 рублей</p>
+                <p class="description">6-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших протоссов.</p>
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltb55b5e92285aa4c9/632250693ab6f40dd2a9081b/starcraft-ii-warchest-6-skin-bundles-section1-feature3.jpg?imwidth=384&imdensity=1" alt="6-й трофейный фонд: комплекты обликов">
+                <button onclick="addToCart('6-й трофейный фонд: комплекты обликов', 4000, 'https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltb55b5e92285aa4c9/632250693ab6f40dd2a9081b/starcraft-ii-warchest-6-skin-bundles-section1-feature3.jpg?imwidth=384&imdensity=1', '6-й трофейный фонд: комплекты обликов — эксклюзивные скины для ваших протоссов.')">Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function addToCart(name, price, image, description) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, image, description });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(name + ' добавлен в корзину!');
+        }
+    </script>
+</body>
+</html>
